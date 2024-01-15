@@ -20,4 +20,8 @@ public class EmployeeManager {
     public static Employees getEmployees() {
         return employees;
     }
+
+    public static void addEmployee(Employee employee) {
+        employees.getEmployeeList().add(employee);
+    }
 }
