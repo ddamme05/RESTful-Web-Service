@@ -28,3 +28,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+tasks.bootJar {
+    mainClass.set("org.ddamme.Main")
+}
+
