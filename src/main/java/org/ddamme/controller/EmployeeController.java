@@ -2,18 +2,16 @@ package org.ddamme.controller;
 
 import org.ddamme.service.EmployeeManager;
 import org.ddamme.model.Employee;
-import org.ddamme.model.Employees;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class EmployeeController {
 
     @GetMapping("/employees")
-    public Employees getAllEmployees() {
+    public List<Employee> getAllEmployees() {
         return EmployeeManager.getEmployees();
     }
 
